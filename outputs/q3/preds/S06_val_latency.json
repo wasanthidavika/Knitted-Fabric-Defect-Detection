@@ -1,0 +1,8 @@
+{
+  "images": 504,
+  "median_ms": 282.27735000109533,
+  "mean_ms": 318.1271003984774,
+  "p95_ms": 445.2400499980285,
+  "hardware": "GPU: NVIDIA GeForce RTX 3050 Laptop GPU; CUDA: 13.0",
+  "scope": "feature extraction + cascade + SVM + NMS, 1 image at a time, excludes image decoding"
+}

@@ -1,0 +1,9 @@
+target,val_prevalence,ROC_AUC,AP,AP_lift_vs_prevalence
+Loop Mark,0.083,0.692,0.135,1.62
+Needle Mark,0.111,0.748,0.475,4.28
+Set Up,0.149,0.772,0.351,2.36
+Oil Spot,0.274,0.684,0.416,1.52
+Hole,0.248,0.616,0.36,1.45
+Contamination,0.188,0.59,0.221,1.17
+Yarn Missing,0.091,0.679,0.311,3.41
+ANY DEFECT,0.893,0.557,0.901,1.01

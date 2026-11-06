@@ -1,0 +1,9 @@
+{
+  "model": "openai/clip-vit-base-patch32",
+  "prompt_set": "P3_context",
+  "variant": "tiled",
+  "aggregator": "top3mean",
+  "val_macro_AP": 0.2758322259671957,
+  "selected_on": "validation only",
+  "n_combinations_tried": 12
+}

@@ -1,0 +1,7 @@
+{
+  "stage1_fit_s": 169.7,
+  "cache_train_s": 285.0,
+  "cache_val_s": 62.2,
+  "best_config": "S06",
+  "best_svm_fit_s": 1.0
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Knitted fabric defect check</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<header>
+  <h1>Knitted fabric defect check</h1>
+  <p>Assistant for fabric quality inspectors: upload a fabric photo to get a pass / refer suggestion. The final decision is yours.</p>
+</header>
+
+<main>
+  <section id="upload" class="card">
+    <div id="drop" tabindex="0">
+      <p><strong>Drop a fabric photo here</strong> or <label for="file" class="link">choose a file</label></p>
+      <input type="file" id="file" accept="image/*">
+      <p id="filename" class="muted">No file selected</p>
+    </div>
+    <button id="check" disabled>Check this fabric</button>
+    <div id="status" role="status" aria-live="polite"></div>
+    <div id="error" class="error" role="alert" hidden></div>
+  </section>
+
+  <section id="result" class="card" hidden>
+    <div id="verdict"></div>
+    <div id="oodwarn" class="warn" hidden></div>
+    <div class="row">
+      <div class="canvaswrap">
+        <canvas id="canvas"></canvas>
+        <p class="muted small">Solid boxes: scores above the decision threshold. Dashed boxes: weaker detections (shown for information only).</p>
+        <label class="small">Show detections with score at least
+          <input type="range" id="minshow" min="0" max="1" step="0.01"> <span id="minshowval"></span></label>
+      </div>
+      <div class="tablewrap">
+        <h2>Possible defects</h2>
+        <table id="dets"><thead><tr><th>Type</th><th>Score</th><th>Seen in validation</th><th></th></tr></thead><tbody></tbody></table>
+        <details open>
+          <summary>What do the numbers mean?</summary>
+          <p class="small"><strong>Score</strong> is the detector's confidence ranking. It is <em>not</em> a probability and not a guarantee.
+          <strong>Seen in validation</strong> shows how often detections with a similar score were correct on held-out validation images
+          (with the number of examples). On new fabric or a different camera it can be lower.</p>
+          <p class="small" id="thrtext"></p>
+        </details>
+      </div>
+    </div>
+    <p class="muted small" id="meta"></p>
+  </section>
+
+  <section id="explain" class="card" hidden>
+    <h2>Why was this flagged?</h2>
+    <p class="small muted">Highlighted areas show where the model is sensitive. They do not prove why a defect exists or how the model reasons.</p>
+    <div id="explainstatus" role="status"></div>
+    <div class="row" id="explainpanels"></div>
+  </section>
+
+  <section class="card">
+    <details>
+      <summary>Limitations of this tool (please read)</summary>
+      <ul id="limits"></ul>
+    </details>
+  </section>
+</main>
+<script src="/static/app.js"></script>
+</body>
+</html>

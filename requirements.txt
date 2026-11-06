@@ -1,0 +1,18 @@
+# Q1/Q2 (pin exact versions after your first successful Kaggle run: pip freeze | grep -i -E "ultralytics|torch|pandas|numpy|scikit|matplotlib|pillow|scipy|pyyaml")
+numpy
+pandas
+scipy
+scikit-learn
+matplotlib
+pillow
+pyyaml
+tqdm
+torch
+torchvision
+ultralytics
+# Later tasks (uncomment when needed)
+# scikit-image        # Gabor / GLCM / LBP baseline
+# torchmetrics pycocotools   # shared mAP implementation
+# timm transformers   # ViT, CLIP
+# fastapi uvicorn python-multipart   # web app
+# grad-cam            # EigenCAM

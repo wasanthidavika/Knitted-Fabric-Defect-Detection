@@ -1,0 +1,32 @@
+{
+  "created_utc": "2026-11-05T01:32:14.679400+00:00",
+  "seed": 42,
+  "model": "yolov8s",
+  "weights": "yolov8s.pt",
+  "pretrained": true,
+  "data_yaml": "E:\\NIBM MSC DS\\Course works\\ANN\\A\\isl_knit_project\\isl_knit_project\\outputs\\q3\\configs\\data_train_val.yaml",
+  "test_split_used": false,
+  "epochs": 30,
+  "imgsz": 640,
+  "batch": 2,
+  "workers": 4,
+  "device": "Ultralytics auto",
+  "optimizer": "AdamW",
+  "lr0": 0.001,
+  "weight_decay": 0.0005,
+  "patience": 10,
+  "amp": true,
+  "mosaic": 1.0,
+  "close_mosaic": 10,
+  "hsv_h": 0.015,
+  "hsv_s": 0.7,
+  "hsv_v": 0.4,
+  "fliplr": 0.5,
+  "flipud": 0.0,
+  "cache": false,
+  "optional_overrides": {
+    "freeze": 10
+  },
+  "torch_version": "2.14.1+cu130",
+  "ultralytics_version": "8.4.190"
+}

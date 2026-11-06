@@ -1,0 +1,25 @@
+{
+  "time": "2026-11-05T23:56:31",
+  "git_commit": "no-git",
+  "hardware": "GPU: NVIDIA GeForce RTX 3050 Laptop GPU; CUDA: 13.0",
+  "weights_md5": {
+    "baseline": "0e50ec420404471bbc2ccd04fa286b8d",
+    "yolo_initial": "064f90ece5225a509cbdc7696bbca378",
+    "yolo_final_E05": "d3106747651064c5bf9c10c24eebfb4b"
+  },
+  "args": {
+    "config": "configs/config.yaml",
+    "confirm": true,
+    "force": false,
+    "baseline": "outputs/q3/baseline/best.joblib",
+    "yolo_initial": "outputs/q3/E00_attempt02/weights/best.pt",
+    "initial_id": "E00",
+    "yolo_final": "outputs/q3/E05/weights/best.pt",
+    "final_ids": "E05",
+    "skip_yolo": false,
+    "conf_thr": 0.25,
+    "thr_baseline": "outputs/q3/eval/threshold_S06.json",
+    "thr_initial": "outputs/q3/eval/threshold_E00_initial.json",
+    "thr_final": "outputs/q3/eval/threshold_E05.json"
+  }
+}

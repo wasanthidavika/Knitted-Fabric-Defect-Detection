@@ -1,0 +1,28 @@
+[
+  {
+    "method": "occlusion",
+    "n": 3,
+    "mean_drop_top_window": 0.3636345813671748,
+    "mean_drop_random_windows": 0.13961162691315013,
+    "mean_difference": 0.22402295445402465,
+    "diff_ci95": [
+      0.15279363170266153,
+      0.2989259704947472
+    ],
+    "share_top_greater_than_random": 1.0,
+    "wilcoxon_p_top_greater": 0.125
+  },
+  {
+    "method": "box_centre",
+    "n": 3,
+    "mean_drop_top_window": 0.3636345813671748,
+    "mean_drop_random_windows": 0.10743192657828331,
+    "mean_difference": 0.2562026547888915,
+    "diff_ci95": [
+      0.15055649876594543,
+      0.4387887179851531
+    ],
+    "share_top_greater_than_random": 1.0,
+    "wilcoxon_p_top_greater": 0.125
+  }
+]

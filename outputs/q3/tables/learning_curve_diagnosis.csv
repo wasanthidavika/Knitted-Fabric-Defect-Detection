@@ -1,0 +1,3 @@
+run,epochs_run,best_epoch,best_mAP50,final_mAP50,final_train_loss,final_val_loss,min_val_loss,min_val_loss_epoch,mAP_last5_slope,hints
+E00_attempt02,30,30,0.4596,0.4596,4.6265,5.1286,5.1286,30,0.01634,mAP still rising at the end: epoch budget is a limit (not converged)
+E11,30,30,0.5099,0.5099,7.5497,8.3635,8.3635,30,0.01043,mAP still rising at the end: epoch budget is a limit (not converged)

@@ -1,0 +1,13 @@
+id,prompt_set,variant,aggregator,val_macro_AP,val_macro_F1
+C_P3_context_tiled_top3mean,P3_context,tiled,top3mean,0.2758322259671957,0.3496086353897891
+C_P3_context_tiled_max,P3_context,tiled,max,0.271285449539797,0.34777133129176035
+C_P2_defect_photo_tiled_top3mean,P2_defect_photo,tiled,top3mean,0.259987221558767,0.3465852057870276
+C_P2_defect_photo_tiled_max,P2_defect_photo,tiled,max,0.25954829474811536,0.3508430830799761
+C_P1_name_only_tiled_top3mean,P1_name_only,tiled,top3mean,0.2524579430931245,0.3422338310338629
+C_P1_name_only_tiled_max,P1_name_only,tiled,max,0.25015220793161497,0.3425256194379024
+C_P3_context_global_top3mean,P3_context,global,top3mean,0.22615485440746633,0.31842962269411224
+C_P3_context_global_max,P3_context,global,max,0.22615485440746633,0.31842962269411224
+C_P1_name_only_global_max,P1_name_only,global,max,0.21821073195160304,0.3167527504834595
+C_P1_name_only_global_top3mean,P1_name_only,global,top3mean,0.21821073195160304,0.3167527504834595
+C_P2_defect_photo_global_max,P2_defect_photo,global,max,0.2083249152622996,0.3162203659704056
+C_P2_defect_photo_global_top3mean,P2_defect_photo,global,top3mean,0.2083249152622996,0.3162203659704056

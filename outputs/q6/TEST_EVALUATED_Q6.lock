@@ -1,0 +1,28 @@
+{
+  "time": "2026-11-06T16:57:00",
+  "git_commit": "no-git",
+  "weights_md5": {
+    "vit": "22b95d0f19e31224afefb644730aa773"
+  },
+  "args": {
+    "config": "configs/config.yaml",
+    "confirm": true,
+    "force": false,
+    "yolo_val": "outputs/q3/preds/E05_val.csv",
+    "yolo_test": "outputs/q3/preds/final_ANN_E05_test.csv",
+    "yolo_label": "final_ANN_E05",
+    "svm_val": "outputs/q3/preds/S06_val.csv",
+    "svm_test": "outputs/q3/preds/classical_SVM_baseline_test.csv",
+    "svm_label": "classical_SVM_baseline",
+    "vit_weights": "outputs/q6/vit/V00/best.pt",
+    "vit_name": "V00",
+    "skip_vit": false,
+    "clip": true,
+    "clip_model": "openai/clip-vit-base-patch32",
+    "models_yaml": "configs/q6_models.yaml",
+    "target_recall": 0.95,
+    "bootstrap": 1000,
+    "reference": null,
+    "gpu_usd_per_hour": null
+  }
+}

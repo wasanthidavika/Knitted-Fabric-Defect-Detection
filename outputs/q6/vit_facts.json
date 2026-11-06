@@ -1,0 +1,35 @@
+[
+  {
+    "model": "ViT-B/16 @384",
+    "input": "384x384",
+    "patch": 16,
+    "patch_tokens": 576,
+    "sequence_length_with_CLS": 577,
+    "attention_entries_per_head_per_layer": 332929,
+    "median_defect_short_side_px": 8.7,
+    "share_defects_smaller_than_one_patch_%": 80.6,
+    "params_with_7_class_head": 86095879
+  },
+  {
+    "model": "ViT-B/16 @224",
+    "input": "224x224",
+    "patch": 16,
+    "patch_tokens": 196,
+    "sequence_length_with_CLS": 197,
+    "attention_entries_per_head_per_layer": 38809,
+    "median_defect_short_side_px": 5.1,
+    "share_defects_smaller_than_one_patch_%": 92.9,
+    "params_with_7_class_head": 85804039
+  },
+  {
+    "model": "CLIP ViT-B/32 @224",
+    "input": "224x224",
+    "patch": 32,
+    "patch_tokens": 49,
+    "sequence_length_with_CLS": 50,
+    "attention_entries_per_head_per_layer": 2500,
+    "median_defect_short_side_px": 5.1,
+    "share_defects_smaller_than_one_patch_%": 98.1,
+    "params_with_7_class_head": null
+  }
+]

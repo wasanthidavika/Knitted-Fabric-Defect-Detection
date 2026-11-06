@@ -1,0 +1,24 @@
+{
+  "configs_evaluated": 12,
+  "svm_configs": 9,
+  "nms_settings": 3,
+  "chosen_per_class_nms": 0.5,
+  "best_id": "S06",
+  "best_val_mAP50_svm_only": 0.0083,
+  "best_val_mAP50_after_nms_choice": 0.0083,
+  "best_val_mAP50_without_box_regression": 0.0069,
+  "cascade_recall_upper_bound_val": 0.1573,
+  "search_space": {
+    "C": [
+      1,
+      10,
+      100
+    ],
+    "gamma": [
+      0.001,
+      0.01,
+      0.1
+    ]
+  },
+  "train_windows": 5304
+}

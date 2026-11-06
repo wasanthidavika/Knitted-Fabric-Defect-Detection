@@ -1,0 +1,16 @@
+﻿@"
+.venv/
+__pycache__/
+*.pyc
+data/
+smoke_data/
+smoke_out/
+outputs/data/
+outputs/q3/*/weights/
+outputs/q6/vit/*/best.pt
+outputs/q6/clip_cache/
+*.pt
+*.pth
+*.onnx
+*.zip
+"@ | Out-File -Encoding utf8 .gitignore

@@ -1,0 +1,10 @@
+# Config for the synthetic smoke test (no real data needed).
+seed: 42
+raw_root: smoke_data/Full
+work_dir: smoke_out
+audit_dir: smoke_out/audit
+resized_dir: smoke_out/data/yolo640
+outputs_dir: smoke_out/outputs
+img_long_side: 320
+exif_mode: apply
+class_names: {0: Loop Mark, 1: Needle Mark, 2: Set Up, 3: Oil Spot, 4: Hole, 5: Contamination, 6: Yarn Missing}

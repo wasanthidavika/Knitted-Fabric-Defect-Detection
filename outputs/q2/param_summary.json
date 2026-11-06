@@ -1,0 +1,38 @@
+{
+  "cfg": "yolov8s.yaml",
+  "imgsz": 640,
+  "nc": 7,
+  "total_params_nc7": 11138309,
+  "total_params_nc80_coco_reference": 11166560,
+  "params_by_section": {
+    "backbone": 5079712,
+    "detect head": 2118757,
+    "neck": 3939840
+  },
+  "gflops": 28.6549504,
+  "strides": [
+    8.0,
+    16.0,
+    32.0
+  ],
+  "detect": {
+    "nc": 7,
+    "reg_max": 16,
+    "outputs_per_location": 71,
+    "box_branch_params": 639936,
+    "cls_branch_params": 1478805,
+    "dfl_params": 16
+  },
+  "module_counts": {
+    "Conv2d": 64,
+    "BatchNorm2d": 57,
+    "SiLU": 1,
+    "Upsample": 2,
+    "MaxPool2d": 1
+  },
+  "activation_types_found": [
+    "SiLU"
+  ],
+  "yaml_depth_multiple": null,
+  "yaml_width_multiple": null
+}

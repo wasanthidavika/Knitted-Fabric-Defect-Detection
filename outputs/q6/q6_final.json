@@ -1,0 +1,112 @@
+{
+  "comparison": [
+    {
+      "model": "Final ANN (YOLOv8s, fine-tuned)",
+      "key": "yolo_final",
+      "task_input": "image 640 px -> detections -> max score per class",
+      "test_macro_F1": 0.7504,
+      "macro_F1_CI95": "[0.715, 0.780]",
+      "test_macro_AP": 0.7962,
+      "val_macro_F1": 0.7774,
+      "defect_recall@val_op(95%)": 0.962,
+      "false_alarm_rate@val_op": 0.604,
+      "latency_ms_median": 11.5,
+      "hardware": "GPU: NVIDIA GeForce RTX 3050 Laptop GPU; CUDA: 13.0",
+      "train_time_min": 31.65,
+      "labelled_training_data": "2,360 images with boxes (+ COCO pretraining)",
+      "third_party_dependence": "weights from Ultralytics (COCO pretrained); library licence: check (AGPL-3.0 to my knowledge)",
+      "privacy": "runs locally; images never leave the machine",
+      "marginal_cost": "no per-prediction fee; compute only"
+    },
+    {
+      "model": "Classical baseline (Gabor+GLCM+LBP -> SVM)",
+      "key": "svm_baseline",
+      "task_input": "image 640 px -> detections -> max score per class",
+      "test_macro_F1": 0.378,
+      "macro_F1_CI95": "[0.342, 0.407]",
+      "test_macro_AP": 0.3277,
+      "val_macro_F1": 0.4086,
+      "defect_recall@val_op(95%)": 0.929,
+      "false_alarm_rate@val_op": 0.887,
+      "latency_ms_median": 275.4,
+      "hardware": "GPU: NVIDIA GeForce RTX 3050 Laptop GPU; CUDA: 13.0",
+      "train_time_min": 7.59,
+      "labelled_training_data": "2,360 images with boxes",
+      "third_party_dependence": "scikit-learn / scikit-image / OpenCV only",
+      "privacy": "runs locally",
+      "marginal_cost": "no per-prediction fee; CPU only"
+    },
+    {
+      "model": "ViT-B/16 @384, fine-tuned (image level)",
+      "key": "vit",
+      "task_input": "letterbox 384x384, 16x16 patches",
+      "test_macro_F1": 0.7767,
+      "macro_F1_CI95": "[0.739, 0.805]",
+      "test_macro_AP": 0.8565,
+      "val_macro_F1": 0.8289,
+      "defect_recall@val_op(95%)": 0.945,
+      "false_alarm_rate@val_op": 0.509,
+      "latency_ms_median": 16.2,
+      "hardware": "GPU: NVIDIA GeForce RTX 3050 Laptop GPU; CUDA: 13.0",
+      "train_time_min": 42.49,
+      "labelled_training_data": "2,360 images with image-level labels (+ ImageNet-21k pretraining)",
+      "third_party_dependence": "pretrained weights downloaded once from the timm / Hugging Face hub; check the weight licence",
+      "privacy": "runs locally after the one-time download",
+      "marginal_cost": "no per-prediction fee; GPU recommended"
+    },
+    {
+      "model": "CLIP ViT-B/32 zero-shot",
+      "key": "clip",
+      "task_input": "tiled tiles, prompts P3_context, top3mean",
+      "test_macro_F1": 0.325,
+      "macro_F1_CI95": "[0.304, 0.346]",
+      "test_macro_AP": 0.2728,
+      "val_macro_F1": 0.3496,
+      "defect_recall@val_op(95%)": 0.936,
+      "false_alarm_rate@val_op": 0.849,
+      "latency_ms_median": 63.3,
+      "hardware": "GPU: NVIDIA GeForce RTX 3050 Laptop GPU; CUDA: 13.0",
+      "train_time_min": null,
+      "labelled_training_data": "0 for the model itself; validation images (502) used to choose prompts/thresholds",
+      "third_party_dependence": "OpenAI CLIP weights via Hugging Face; check the licence",
+      "privacy": "runs locally after the one-time download (a hosted API would send images to a third party: not used)",
+      "marginal_cost": "no per-prediction fee; compute only"
+    }
+  ],
+  "paired": [
+    {
+      "model_A": "svm_baseline",
+      "model_B(reference)": "yolo_final",
+      "macro_F1_A_minus_B": -0.372,
+      "CI95": [
+        -0.416,
+        -0.3292
+      ],
+      "P(A better)": 0.0
+    },
+    {
+      "model_A": "vit",
+      "model_B(reference)": "yolo_final",
+      "macro_F1_A_minus_B": 0.0263,
+      "CI95": [
+        -0.0062,
+        0.0572
+      ],
+      "P(A better)": 0.948
+    },
+    {
+      "model_A": "clip",
+      "model_B(reference)": "yolo_final",
+      "macro_F1_A_minus_B": -0.4245,
+      "CI95": [
+        -0.4635,
+        -0.3864
+      ],
+      "P(A better)": 0.0
+    }
+  ],
+  "reference": "yolo_final",
+  "n_test_images": 506,
+  "n_defective": 453,
+  "hardware_now": "GPU: NVIDIA GeForce RTX 3050 Laptop GPU; CUDA: 13.0"
+}

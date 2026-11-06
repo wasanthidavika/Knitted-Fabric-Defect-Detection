@@ -1,0 +1,8 @@
+,train,val,test,total,share_%
+Loop Mark,670,105,61,836,4.0
+Needle Mark,286,60,60,406,2.0
+Set Up,452,90,84,626,3.0
+Oil Spot,10208,2101,1491,13800,66.7
+Hole,1718,299,262,2279,11.0
+Contamination,1527,304,202,2033,9.8
+Yarn Missing,487,92,120,699,3.4

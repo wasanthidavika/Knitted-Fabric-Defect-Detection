@@ -1,0 +1,10 @@
+{
+  "name": "E05",
+  "chosen_on": "val",
+  "target_recall": 0.95,
+  "target_reached": true,
+  "conf_thr": 0.07,
+  "any_defect_recall": 0.9511111111111111,
+  "false_alarm_rate_on_defect_free_images": 0.6296296296296297,
+  "macro_f1_at_thr": 0.7388617174884432
+}

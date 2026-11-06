@@ -1,0 +1,8 @@
+,yolo_final,svm_baseline,vit,clip
+Loop Mark,0.583,0.253,0.692,0.179
+Needle Mark,0.804,0.432,0.864,0.248
+Set Up,0.875,0.45,0.915,0.413
+Oil Spot,0.761,0.471,0.751,0.436
+Hole,0.815,0.532,0.785,0.51
+Contamination,0.725,0.382,0.697,0.326
+Yarn Missing,0.69,0.127,0.732,0.162

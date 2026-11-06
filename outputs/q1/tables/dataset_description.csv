@@ -1,0 +1,4 @@
+split,images,no_defect,mean_W,mean_H,boxes
+train,2365,250,3984.4,3146.5,15348
+val,504,54,3959.5,3150.0,3051
+test,506,53,3933.9,3095.7,2280

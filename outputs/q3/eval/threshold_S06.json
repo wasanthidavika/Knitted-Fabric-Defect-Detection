@@ -1,0 +1,10 @@
+{
+  "name": "S06",
+  "chosen_on": "val",
+  "target_recall": 0.95,
+  "target_reached": true,
+  "conf_thr": 0.26,
+  "any_defect_recall": 0.9977777777777778,
+  "false_alarm_rate_on_defect_free_images": 1.0,
+  "macro_f1_at_thr": 0.3572908621782454
+}

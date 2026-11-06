@@ -1,0 +1,12 @@
+path: E:\NIBM MSC DS\Course works\ANN\A\isl_knit_project\isl_knit_project\outputs\data\yolo640
+train: images/train
+val: images/val
+names:
+  0: Loop Mark
+  1: Needle Mark
+  2: Set Up
+  3: Oil Spot
+  4: Hole
+  5: Contamination
+  6: Yarn Missing
+nc: 7

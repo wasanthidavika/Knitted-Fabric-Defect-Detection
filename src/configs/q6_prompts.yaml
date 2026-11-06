@@ -1,0 +1,19 @@
+# Prompts for CLIP zero-shot. EDIT the descriptions after LOOKING at outputs/q1/figures/examples_per_class.png:
+# a prompt that does not describe what the defect really looks like cannot work.
+# All wording decisions are made on VALIDATION images only. Keep every variant you try (they are all logged).
+class_descriptions:        # class id -> list of short descriptions (checked against the dataset paper / examples)
+  0: ["a loop mark", "a loop mark line across the fabric"]
+  1: ["a needle mark", "a vertical needle line streak"]
+  2: ["a set-up fault", "a start-up stripe defect"]
+  3: ["an oil spot", "a dark oil stain"]
+  4: ["a hole", "a hole in the knit"]
+  5: ["contamination", "dirt or lint contamination"]
+  6: ["a missing yarn", "a gap where a yarn is missing"]
+normal: ["normal knitted fabric", "clean knitted fabric without any defect"]
+templates:                 # prompt sets; each class text embedding = mean over (templates x descriptions)
+  P1_name_only: ["a photo of {}."]
+  P2_defect_photo: ["a close-up photo of knitted fabric with {}.", "a macro photo of {} on a knitted textile."]
+  P3_context: ["a photo of grey knitted fabric with {}.", "a textile quality inspection photo showing {}.", "a close-up of a fabric defect: {}."]
+variants: [global, tiled]  # global = whole image squashed to 224; tiled = 224 px tiles, stride 112
+aggregators: [max, top3mean]
+temperature: 100.0

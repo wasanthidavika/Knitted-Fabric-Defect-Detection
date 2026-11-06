@@ -1,0 +1,8 @@
+,Loop Mark,Needle Mark,Set Up,Oil Spot,Hole,Contamination,Yarn Missing
+Loop Mark,243,6,16,42,61,99,12
+Needle Mark,6,320,24,23,40,20,3
+Set Up,16,24,429,20,77,26,16
+Oil Spot,42,23,20,760,85,170,24
+Hole,61,40,77,85,745,133,14
+Contamination,99,20,26,170,133,542,34
+Yarn Missing,12,3,16,24,14,34,261

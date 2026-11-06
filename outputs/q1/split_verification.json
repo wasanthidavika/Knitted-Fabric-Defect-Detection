@@ -1,0 +1,63 @@
+{
+  "n_images": 3375,
+  "n_groups": 3328,
+  "groups_spanning_splits": 0,
+  "duplicate_stems": 2,
+  "duplicate_image_ids": 0,
+  "split_counts": {
+    "train": 2365,
+    "test": 506,
+    "val": 504
+  },
+  "split_shares": {
+    "train": 0.7007,
+    "test": 0.1499,
+    "val": 0.1493
+  },
+  "dyed_by_split": {
+    "test": 0.1265,
+    "train": 0.1353,
+    "val": 0.1389
+  },
+  "images_per_class_per_split": {
+    "Loop Mark": {
+      "train": 201,
+      "val": 42,
+      "test": 42
+    },
+    "Needle Mark": {
+      "train": 264,
+      "val": 56,
+      "test": 58
+    },
+    "Set Up": {
+      "train": 354,
+      "val": 75,
+      "test": 75
+    },
+    "Oil Spot": {
+      "train": 622,
+      "val": 138,
+      "test": 130
+    },
+    "Hole": {
+      "train": 620,
+      "val": 125,
+      "test": 125
+    },
+    "Contamination": {
+      "train": 447,
+      "val": 95,
+      "test": 99
+    },
+    "Yarn Missing": {
+      "train": 215,
+      "val": 46,
+      "test": 45
+    }
+  },
+  "largest_group_images": 11,
+  "largest_group_share": 0.0033,
+  "matches_addendum_counts": true,
+  "warnings": []
+}

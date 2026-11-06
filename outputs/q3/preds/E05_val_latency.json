@@ -1,0 +1,9 @@
+{
+  "images": 504,
+  "median_ms": 11.417900001106318,
+  "mean_ms": 12.715693386908498,
+  "p95_ms": 19.611889998486728,
+  "hardware": "GPU: NVIDIA GeForce RTX 3050 Laptop GPU; CUDA: 13.0",
+  "imgsz": 640,
+  "scope": "preprocess+inference+postprocess, batch 1, excludes image decoding"
+}

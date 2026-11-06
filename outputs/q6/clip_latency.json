@@ -1,0 +1,8 @@
+{
+  "median_ms": 63.272600003983825,
+  "mean_ms": 62.69441785791839,
+  "p95_ms": 68.55901000308222,
+  "n": 28,
+  "hardware": "GPU: NVIDIA GeForce RTX 3050 Laptop GPU; CUDA: 13.0",
+  "scope": "tiling + CLIP image encoder + scoring per image, excludes decoding and text encoding"
+}

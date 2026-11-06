@@ -1,0 +1,20 @@
+seed: 42
+
+raw_root: "data/ISL knit"
+work_dir: "outputs"
+audit_dir: "outputs/audit"
+resized_dir: "outputs/data/yolo640"
+outputs_dir: "outputs"
+
+img_long_side: 640
+expected_split_counts: {train: 2365, val: 504, test: 506}
+exif_mode: apply
+
+class_names:
+  0: Loop Mark
+  1: Needle Mark
+  2: Set Up
+  3: Oil Spot
+  4: Hole
+  5: Contamination
+  6: Yarn Missing

@@ -1,0 +1,24 @@
+idx,from_layers,type,repeats,params,out_shape,section
+0,-1,Conv,1,928,32x320x320,backbone
+1,-1,Conv,1,18560,64x160x160,backbone
+2,-1,C2f,1,29056,64x160x160,backbone
+3,-1,Conv,1,73984,128x80x80,backbone
+4,-1,C2f,2,197632,128x80x80,backbone
+5,-1,Conv,1,295424,256x40x40,backbone
+6,-1,C2f,2,788480,256x40x40,backbone
+7,-1,Conv,1,1180672,512x20x20,backbone
+8,-1,C2f,1,1838080,512x20x20,backbone
+9,-1,SPPF,1,656896,512x20x20,backbone
+10,-1,Upsample,1,0,512x40x40,neck
+11,"[-1, 6]",Concat,1,0,768x40x40,neck
+12,-1,C2f,1,591360,256x40x40,neck
+13,-1,Upsample,1,0,256x80x80,neck
+14,"[-1, 4]",Concat,1,0,384x80x80,neck
+15,-1,C2f,1,148224,128x80x80,neck
+16,-1,Conv,1,147712,128x40x40,neck
+17,"[-1, 12]",Concat,1,0,384x40x40,neck
+18,-1,C2f,1,493056,256x40x40,neck
+19,-1,Conv,1,590336,256x20x20,neck
+20,"[-1, 9]",Concat,1,0,768x20x20,neck
+21,-1,C2f,1,1969152,512x20x20,neck
+22,"[15, 18, 21]",Detect,1,2118757,[11x8400; dict],detect head

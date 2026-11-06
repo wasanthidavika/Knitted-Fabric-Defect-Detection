@@ -1,0 +1,29 @@
+# Web application configuration. Run from the PROJECT ROOT:
+# uvicorn app.main:app --host 127.0.0.1 --port 8000
+
+main_config: configs/config.yaml
+backend: yolo
+
+weights: outputs/q3/E05/weights/best.pt
+svm_bundle: outputs/q3/baseline/best.joblib
+
+threshold_json: outputs/q3/eval/threshold_E05.json
+calibration_json: outputs/q3/eval/calibration_E05.json
+ood_json: outputs/q4/ood_stats.json
+
+model_version: "E05: YOLOv8s fine-tuned on ISL-Knit (frozen split)"
+
+work_long_side: 640
+display_floor: 0.15
+min_validation_n: 20
+eigencam_layer: 15
+explain_max_patches: 36
+
+limits:
+  max_upload_mb: 25
+  min_side_px: 64
+  max_side_px: 12000
+  max_pixels: 120000000
+  max_aspect_ratio: 8
+
+extra_limitations: []

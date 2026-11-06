@@ -1,0 +1,26 @@
+# Qualitative facts for the 6.b comparison table. VERIFY each line yourself before submitting (licences, sizes, where weights come from).
+models:
+  yolo_final:
+    label: "Final ANN (YOLOv8s, fine-tuned)"
+    labelled_training_images: "2,360 images with boxes (+ COCO pretraining)"
+    third_party: "weights from Ultralytics (COCO pretrained); library licence: check (AGPL-3.0 to my knowledge)"
+    privacy: "runs locally; images never leave the machine"
+    marginal_cost_note: "no per-prediction fee; compute only"
+  svm_baseline:
+    label: "Classical baseline (Gabor+GLCM+LBP -> SVM)"
+    labelled_training_images: "2,360 images with boxes"
+    third_party: "scikit-learn / scikit-image / OpenCV only"
+    privacy: "runs locally"
+    marginal_cost_note: "no per-prediction fee; CPU only"
+  vit:
+    label: "ViT-B/16 @384, fine-tuned (image level)"
+    labelled_training_images: "2,360 images with image-level labels (+ ImageNet-21k pretraining)"
+    third_party: "pretrained weights downloaded once from the timm / Hugging Face hub; check the weight licence"
+    privacy: "runs locally after the one-time download"
+    marginal_cost_note: "no per-prediction fee; GPU recommended"
+  clip:
+    label: "CLIP ViT-B/32 zero-shot"
+    labelled_training_images: "0 for the model itself; validation images (502) used to choose prompts/thresholds"
+    third_party: "OpenAI CLIP weights via Hugging Face; check the licence"
+    privacy: "runs locally after the one-time download (a hosted API would send images to a third party: not used)"
+    marginal_cost_note: "no per-prediction fee; compute only"

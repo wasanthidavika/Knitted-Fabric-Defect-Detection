@@ -1,0 +1,13 @@
+id,group,what_changed,hypothesis,weights,epochs,imgsz,batch,optimizer,lr0,seed,extra_args
+E00,initial,Initial YOLOv8s configuration with batch size 2,Reference run: COCO-pretrained YOLOv8s fine-tunes to a useful detector within 30 epochs,yolov8s.pt,30,640,2,AdamW,0.001,42,
+E01,optimiser,AdamW lr0=0.001 -> SGD lr0=0.01 (momentum 0.937),SGD converges more slowly in 30 epochs but generalises at least as well as AdamW,yolov8s.pt,30,640,2,SGD,0.01,42,--momentum 0.937
+E02,learning_rate,lr0 0.001 -> 0.0003,A lower lr is more stable but under-trains within 30 epochs,yolov8s.pt,30,640,2,AdamW,0.0003,42,
+E03,learning_rate,lr0 0.001 -> 0.003,A higher lr is unstable for fine-tuning (damages pretrained features) and lowers mAP50,yolov8s.pt,30,640,2,AdamW,0.003,42,
+E04,batch_size,Batch size 2 -> 1,Smaller batch gives noisier gradients and BatchNorm statistics; possible small gain or instability,yolov8s.pt,30,640,1,AdamW,0.001,42,
+E05,batch_size,Batch size 2 -> 4,Larger batch is smoother but fewer updates per epoch: similar or slightly lower mAP50 at 30 epochs,yolov8s.pt,30,640,4,AdamW,0.001,42,
+E06,depth_width,YOLOv8s -> YOLOv8n,Smaller model under-fits small defects: lower mAP50 but much faster,yolov8n.pt,30,640,2,AdamW,0.001,42,
+E07,depth_width,YOLOv8s -> YOLOv8m,Larger model improves small-defect detection if not overfitting 2360 images; slower,yolov8m.pt,30,640,2,AdamW,0.001,42,
+E08,risky,backbone frozen (freeze=10),Frozen COCO backbone cannot adapt to knit texture so mAP50 is clearly below E00,yolov8s.pt,30,640,2,AdamW,0.001,42,--freeze 10
+E09,risky,input 640 -> 960,Higher resolution helps tiny defects (Finding 1) but costs time and memory,yolov8s.pt,30,960,2,AdamW,0.001,42,
+E10,risky,mosaic augmentation off,Without mosaic the model overfits 2360 images sooner: lower validation mAP50,yolov8s.pt,30,640,2,AdamW,0.001,42,--mosaic 0
+E11,risky,classification loss gain 0.5 -> 1.5,Higher class-loss gain helps rare classes but may hurt box quality: effect on macro AP uncertain,yolov8s.pt,30,640,2,AdamW,0.001,42,--cls 1.5

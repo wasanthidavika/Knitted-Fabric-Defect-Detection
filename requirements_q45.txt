@@ -1,0 +1,8 @@
+# Q4/Q5 additions (tested with fastapi 0.162, starlette 1.10 in the authoring sandbox; pin your own versions after the first run)
+fastapi
+uvicorn
+python-multipart      # required by FastAPI for file uploads
+httpx                 # FastAPI TestClient (tests only)
+opencv-python-headless
+scipy
+# already needed by earlier tasks: numpy pandas scikit-learn matplotlib pillow pyyaml torch ultralytics scikit-image joblib

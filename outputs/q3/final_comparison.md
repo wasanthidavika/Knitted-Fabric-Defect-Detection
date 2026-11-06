@@ -1,0 +1,5 @@
+                      model               kind  mAP50  mAP50_95  train_time_min  latency_ms_median                                            hardware                                                                       notes
+trivial_whole_image_OilSpot  trivial benchmark 0.0000    0.0000            0.00             0.0000                                                 n/a                    whole-image box of the most frequent TRAIN class, conf 1
+     classical_SVM_baseline classical baseline 0.0045    0.0010            7.59           275.4253 GPU: NVIDIA GeForce RTX 3050 Laptop GPU; CUDA: 13.0 train time = stage-1 + train features + best SVM fit (grid search excluded)
+            initial_ANN_E00        initial ANN 0.4487    0.2221             NaN            10.9716 GPU: NVIDIA GeForce RTX 3050 Laptop GPU; CUDA: 13.0                                                    screening run, 30 epochs
+              final_ANN_E05          final ANN 0.5789    0.2869           31.65            11.5454 GPU: NVIDIA GeForce RTX 3050 Laptop GPU; CUDA: 13.0                                                                            

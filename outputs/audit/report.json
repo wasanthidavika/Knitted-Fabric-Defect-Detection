@@ -1,0 +1,264 @@
+{
+  "root": "data/ISL kint",
+  "seed": 42,
+  "hash_thr": 12,
+  "class_names_file": {},
+  "orphan_labels": {
+    "test": 0,
+    "train": 0,
+    "val": 0
+  },
+  "label_issues": {},
+  "unreadable_images": 0,
+  "split_summary": {
+    "train": {
+      "images": 2018,
+      "with_label_file": 2018,
+      "no_defect_images": 205,
+      "mean_W": 3974.6,
+      "mean_H": 3135.6,
+      "min_W": 677,
+      "max_W": 8000,
+      "boxes": 12195
+    },
+    "val": {
+      "images": 326,
+      "with_label_file": 326,
+      "no_defect_images": 46,
+      "mean_W": 3923.6,
+      "mean_H": 3148.3,
+      "min_W": 1600,
+      "max_W": 4896,
+      "boxes": 2264
+    },
+    "test": {
+      "images": 1031,
+      "with_label_file": 1031,
+      "no_defect_images": 106,
+      "mean_W": 3974.3,
+      "mean_H": 3155.7,
+      "min_W": 319,
+      "max_W": 8000,
+      "boxes": 6220
+    }
+  },
+  "image_size_counts_top5": {
+    "4000x3000": 978,
+    "4608x3456": 566,
+    "4608x2592": 494,
+    "3000x4000": 227,
+    "4160x3120": 176
+  },
+  "class_instances": {
+    "class_0": {
+      "train": 491,
+      "val": 108,
+      "test": 237,
+      "total": 836
+    },
+    "class_1": {
+      "train": 239,
+      "val": 49,
+      "test": 118,
+      "total": 406
+    },
+    "class_2": {
+      "train": 394,
+      "val": 37,
+      "test": 195,
+      "total": 626
+    },
+    "class_3": {
+      "train": 8107,
+      "val": 1490,
+      "test": 4203,
+      "total": 13800
+    },
+    "class_4": {
+      "train": 1323,
+      "val": 226,
+      "test": 730,
+      "total": 2279
+    },
+    "class_5": {
+      "train": 1205,
+      "val": 295,
+      "test": 533,
+      "total": 2033
+    },
+    "class_6": {
+      "train": 436,
+      "val": 59,
+      "test": 204,
+      "total": 699
+    }
+  },
+  "class_images": {
+    "class_0": {
+      "train": 175,
+      "val": 25,
+      "test": 85,
+      "total": 285
+    },
+    "class_1": {
+      "train": 217,
+      "val": 48,
+      "test": 114,
+      "total": 379
+    },
+    "class_2": {
+      "train": 319,
+      "val": 32,
+      "test": 153,
+      "total": 504
+    },
+    "class_3": {
+      "train": 540,
+      "val": 93,
+      "test": 257,
+      "total": 890
+    },
+    "class_4": {
+      "train": 501,
+      "val": 84,
+      "test": 287,
+      "total": 872
+    },
+    "class_5": {
+      "train": 389,
+      "val": 63,
+      "test": 190,
+      "total": 642
+    },
+    "class_6": {
+      "train": 193,
+      "val": 24,
+      "test": 90,
+      "total": 307
+    }
+  },
+  "multi_class_images": 662,
+  "multi_class_frac_of_defect_images": 0.2194,
+  "no_defect_frac": 0.1058,
+  "imbalance_ratio_images": 3.12,
+  "chi2_class_vs_split_p": 0.15118548000152215,
+  "box_size_vs_resolution": {
+    "224": {
+      "median_short_side_px": 6.3,
+      "frac_boxes_short_side_lt_8px": 0.6515
+    },
+    "384": {
+      "median_short_side_px": 10.8,
+      "frac_boxes_short_side_lt_8px": 0.2955
+    },
+    "512": {
+      "median_short_side_px": 14.3,
+      "frac_boxes_short_side_lt_8px": 0.1547
+    },
+    "640": {
+      "median_short_side_px": 17.9,
+      "frac_boxes_short_side_lt_8px": 0.0837
+    }
+  },
+  "box_rel_area_quantiles": {
+    "0.05": 0.00019,
+    "0.25": 0.00054,
+    "0.5": 0.00111,
+    "0.75": 0.00317,
+    "0.95": 0.05497
+  },
+  "suggested_min_resolution": 640,
+  "vit_tokens": {
+    "224": 196,
+    "384": 576,
+    "512": 1024
+  },
+  "near_dup_pairs_total": 74,
+  "near_dup_pairs_cross_split": 30,
+  "near_dup_pairs_within_split": 44,
+  "leak_by_split": {
+    "train": {
+      "images_with_near_dup_elsewhere": 21,
+      "frac": 0.0104
+    },
+    "val": {
+      "images_with_near_dup_elsewhere": 5,
+      "frac": 0.0153
+    },
+    "test": {
+      "images_with_near_dup_elsewhere": 13,
+      "frac": 0.0126
+    }
+  },
+  "exact_dup_groups": 1,
+  "exact_dup_groups_cross_split": 1,
+  "stem_groups_cross_split": 2,
+  "stem_groups_multi_image": 2,
+  "metadata_files_found": [],
+  "colour_keyword_coverage": 0.0,
+  "colour_sat_threshold": 0.2832,
+  "colour_counts": {
+    "grey": 2921,
+    "dyed": 454
+  },
+  "colour_source_counts": {
+    "saturation_otsu(HEURISTIC)": 3375
+  },
+  "class_by_colour": {
+    "class_0": {
+      "dyed": 33,
+      "grey": 252,
+      "dyed_share": 0.116
+    },
+    "class_1": {
+      "dyed": 40,
+      "grey": 339,
+      "dyed_share": 0.106
+    },
+    "class_2": {
+      "dyed": 104,
+      "grey": 400,
+      "dyed_share": 0.206
+    },
+    "class_3": {
+      "dyed": 38,
+      "grey": 852,
+      "dyed_share": 0.043
+    },
+    "class_4": {
+      "dyed": 163,
+      "grey": 709,
+      "dyed_share": 0.187
+    },
+    "class_5": {
+      "dyed": 56,
+      "grey": 586,
+      "dyed_share": 0.087
+    },
+    "class_6": {
+      "dyed": 18,
+      "grey": 289,
+      "dyed_share": 0.059
+    }
+  },
+  "no_defect_by_colour": {
+    "grey": 306,
+    "dyed": 51
+  },
+  "chi2_class_vs_colour_p": 1.181147592367994e-28,
+  "colour_by_split": {
+    "test": {
+      "dyed": 142,
+      "grey": 889
+    },
+    "train": {
+      "dyed": 275,
+      "grey": 1743
+    },
+    "val": {
+      "dyed": 37,
+      "grey": 289
+    }
+  },
+  "n_groups": 3328
+}

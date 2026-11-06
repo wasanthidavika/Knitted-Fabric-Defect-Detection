@@ -1,0 +1,4 @@
+id,group,what_changed,hypothesis,weights,epochs,imgsz,batch,optimizer,lr0,seed,extra_args
+F42,final,TODO copy the chosen configuration,TODO final model should match its screening result at longer training,TODO,TODO,TODO,TODO,TODO,TODO,42,TODO
+F43,final,TODO same as F42,TODO seed repeat,TODO,TODO,TODO,TODO,TODO,TODO,43,TODO
+F44,final,TODO same as F42,TODO seed repeat,TODO,TODO,TODO,TODO,TODO,TODO,44,TODO

@@ -1,0 +1,4 @@
+model_A,model_B(reference),macro_F1_A_minus_B,CI95,P(A better)
+svm_baseline,yolo_final,-0.372,"[-0.416, -0.3292]",0.0
+vit,yolo_final,0.0263,"[-0.0062, 0.0572]",0.948
+clip,yolo_final,-0.4245,"[-0.4635, -0.3864]",0.0
